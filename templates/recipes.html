@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Recipes {% endblock %}
+
+
+{% block body %} 
+
+<h1>Recipes Page</h1>
+
+{% if all_recipes %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Recipe Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Recipe Owner</th>
+            <th scope="col">Added By </th>
+            <th scope="col">Date Added</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for recipe in all_recipes %}
+        <tr>
+
+            <td> {{ recipe['recipe_name'] }}</td>
+            <td> {{ recipe['category'] }}</td>
+            <td> {{ recipe['recipe_owner'] }}</td>
+            <td> {{ recipe['added_by'] }}</td>
+            <td> {{ recipe['date_added'] }}</td>
+            <td>
+                <form action="{{ url_for('print_recipe', recipe_id=recipe['_id']) }}" method="POST">
+                    <input type="submit" class="btn btn-primary" value="View Recipe" />
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% endblock %}
