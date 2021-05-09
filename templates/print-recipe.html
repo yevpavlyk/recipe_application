@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Print a Recipe {% endblock %}
+{% block title %} Recipe Details {% endblock %}
 {% block body %}
 
 {% block pageDescription %} <meta name="description" content="Print a recipe." />
@@ -9,7 +9,7 @@
 <h3>{{ recipe['recipe_name'] }}</h3>
 <hr>
 <div class="form-group">
-    <label class="print">Food category:</label>
+    <label class="print">Cuisine:</label>
     <p style="display:inline;">{{ recipe['category'] }}</p>
 </div>
 
