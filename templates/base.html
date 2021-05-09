@@ -5,9 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %} {% endblock%}</title>
+  {% block pageDescription %} {% endblock %} 
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+
+  <meta name="description" content="Page description. No longer than 155 characters." />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@publisher_handle">
+  <meta name="twitter:title" content="yevpav.me">
+  <meta name="twitter:description" content="A website of affordable and easy dinner recipes for all.">
+  <meta name="twitter:creator" content="@author_handle">
+  <-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="http://www.example.com/static/italianfood.jpeg">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Dinner Recipes Made Simple" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="yevpav.me" />
+  <meta property="og:image" content="http://example.com/static/italianfood.jpeg" />
+  <meta property="og:description" content="A website of affordable and easy dinner recipes for all." />
+  <meta property="og:site_name" content="Dinner Recipes Made Simple" />
+
 
 </head>
 
@@ -119,7 +141,17 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1172R3VBPR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-1172R3VBPR');
+    </script>
+
+      
     <!-- Add & Remove Ingredients & Preparation Steps  -->
     <script>
       $(document).ready(function () {

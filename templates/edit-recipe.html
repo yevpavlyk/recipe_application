@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %} Edit a Recipe {% endblock %}
-
-
 {% block body %}
 
-<h3>Edit a recipe</h3>
+{% block pageDescription %} <meta name="description" content="Edit a recipe." />
+{% endblock %}
+
+<h3>Edit a Recipe</h3>
 <hr>
 <form method="POST" action="{{ url_for('update_recipe', recipe_id=recipe['_id']) }}">
 
@@ -16,7 +17,7 @@
     </div>
 
     <div class="form-group">
-        <label for="category" class="mr-sm-2">Food category:</label>
+        <label for="category" class="mr-sm-2">Cuisine:</label>
         <select name="category" id="category" class="custom-select mr-sm-2">
             {% for category in all_categories %}
             <option value="{{ category['category_name'] }}" {% if category['category_name'] == recipe['category'] %}

@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block title %} Print a Recipe {% endblock %}
-
-
 {% block body %}
+
+{% block pageDescription %} <meta name="description" content="Print a recipe." />
+{% endblock %}
 
 <h3>{{ recipe['recipe_name'] }}</h3>
 <hr>

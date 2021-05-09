@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %} My Recipes {% endblock %}
-
+{% block title %} Dinner Recipes Made Simple {% endblock %}
+{% block pageDescription %} <meta name="description" content="A website of affordable and easy dinner recipes for all." />
+{% endblock %}
 
 {% block body %} 
 
-<h1>Newest Recipes</h1>
+<h1>Freshest Recipes</h1>
 
 {% if all_recipes %}
 <table class="table table-hover">
     <thead>
         <tr>
             <th scope="col">Recipe Name</th>
-            <th scope="col">Category</th>
+            <th scope="col">Cuisine</th>
             <th scope="col">Recipe Owner</th>
-            <th scope="col">Added By </th>
-            <th scope="col">Date Added</th>
         </tr>
     </thead>
 
@@ -26,8 +25,6 @@
             <td> {{ recipe['recipe_name'] }}</td>
             <td> {{ recipe['category'] }}</td>
             <td> {{ recipe['recipe_owner'] }}</td>
-            <td> {{ recipe['added_by'] }}</td>
-            <td> {{ recipe['date_added'] }}</td>
             <td>
                 <form action="{{ url_for('print_recipe', recipe_id=recipe['_id']) }}" method="POST">
                     <input type="submit" class="btn btn-primary" value="View Recipe" />

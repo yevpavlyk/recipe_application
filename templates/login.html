@@ -3,8 +3,10 @@
 
 {% block title %} My Recipes Login {% endblock %}
 
-
 {% block body %} 
+
+{% block pageDescription %} <meta name="description" content="Login to the web application." />
+{% endblock %}
 
 <form method=POST action="{{ url_for('login') }}">
 <p>
