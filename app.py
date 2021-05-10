@@ -6,7 +6,11 @@ from bson.objectid import ObjectId
 from flask import Flask, request, render_template, redirect, url_for, session, flash
 from flask_login import LoginManager, UserMixin, current_user, login_user, logout_user, login_required
 <<<<<<< HEAD
+<<<<<<< HEAD
 # import Bcrypt
+=======
+from flask_bcrypt import Bcrypt
+>>>>>>> parent of 626e49b (Update app.py)
 =======
 from flask_bcrypt import Bcrypt
 >>>>>>> parent of 626e49b (Update app.py)
@@ -15,6 +19,10 @@ from functools import wraps
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+bcrypt = Bcrypt(app)
+>>>>>>> parent of 626e49b (Update app.py)
 =======
 bcrypt = Bcrypt(app)
 >>>>>>> parent of 626e49b (Update app.py)
