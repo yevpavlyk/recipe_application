@@ -5,16 +5,11 @@ import datetime
 from bson.objectid import ObjectId
 from flask import Flask, request, render_template, redirect, url_for, session, flash
 from flask_login import LoginManager, UserMixin, current_user, login_user, logout_user, login_required
-<<<<<<< HEAD
-from flask_bcrypt import Bcrypt
-=======
 import Bcrypt
->>>>>>> parent of c1652ad (Update app.py)
 from functools import wraps
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-bcrypt = Bcrypt(app)
 
 ############ TO DO #############
 
