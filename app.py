@@ -7,6 +7,7 @@ from flask import Flask, request, render_template, redirect, url_for, session, f
 from flask_login import LoginManager, UserMixin, current_user, login_user, logout_user, login_required
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # import Bcrypt
 =======
 from flask_bcrypt import Bcrypt
@@ -14,6 +15,9 @@ from flask_bcrypt import Bcrypt
 =======
 from flask_bcrypt import Bcrypt
 >>>>>>> parent of 626e49b (Update app.py)
+=======
+import Bcrypt
+>>>>>>> parent of c1652ad (Update app.py)
 from functools import wraps
 
 app = Flask(__name__)
